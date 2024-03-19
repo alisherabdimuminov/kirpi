@@ -1,0 +1,32 @@
+# pyproject.toml
+
+[build-system]
+requires = ["flit_core >=3.2,<4"]
+build-backend = "flit_core.buildapi"
+
+[project]
+name = "kirpi"
+version = "1.0.0"
+description = "Lightweight and small ORM library for Python"
+readme = "README.md"
+authors = [{ name = "Ali", email = "alisher.abdimuminov.2005@gmail.com" }]
+license = { file = "LICENSE" }
+classifiers = [
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python",
+    "Programming Language :: Python :: 3",
+]
+keywords = ["fastapiorm", "fastapi", "orm"]
+dependencies = [
+    "psycopg",
+]
+requires-python = ">=3.9"
+
+[project.optional-dependencies]
+dev = ["psycopg"]
+
+[project.urls]
+Homepage = "https://github.com/alisherabdimuminov/kirpi"
+
+[project.scripts]
+kirpi = "kirpi.cli:main"
